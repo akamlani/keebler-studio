@@ -1,0 +1,52 @@
+pre-commit==2.19.0              # https://pre-commit.com/
+
+# linting, formatting
+pylint==2.12.2
+flake8==4.0.1
+black==22.3.0
+isort==5.10.1
+interrogate==1.5.0              # check for missing docstrings
+pyupgrade==2.32.1               # automatically upgrade syntax for newer versions of the language
+autopep8==1.6.0
+
+# core
+ipython==7.28.0
+python-dotenv==0.20.0
+# scientific computation
+numpy>=1.16.5,<=1.22.3
+scipy>=1.2.0,<2.0.0
+# data munging
+pandas>=1.0.0,<2.0.0
+tqdm>=4.33.0,<5.0.0
+# network
+requests==2.27.1
+
+# file i/o
+pyyaml==6.0
+hydra-core==1.1.1
+fsspec==2022.5.0
+
+# dependency injection
+antidote==1.0.1
+
+# for logging / debugging
+devtools[pygments]==0.8.0       # https://python-devtools.helpmanual.io/usage/
+ipdb==0.13.9
+icecream==2.1.2
+watchdog==2.1.6
+
+# for terminal
+coloredlogs==15.0.1
+termcolor==1.1.0
+textual==0.1.16
+rich==11.2.0
+
+# for notebooks
+nbval==0.9.6
+nbqa==1.2.3
+nbstripout==0.5.0               #  clear All output commands
+
+# for cli
+click<8.0.2,>=7.0.0             # for feast dependency conflict
+typer==0.4.1
+python-fire==0.1.0

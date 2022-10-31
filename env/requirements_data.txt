@@ -1,0 +1,11 @@
+# data sources
+opendatasets==0.1.22
+fsspec==2022.10.0
+# data munging
+polars==0.14.24
+# data validation
+great_expectations==0.15.29
+pandera==0.13.3
+pydantic==1.10.2
+# data analysis
+sparklines==0.4.2

@@ -1,0 +1,43 @@
+# install pre-commit hooks: pre-commit install
+repos:
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: check-added-large-files
+    - id: check-symlinks
+    - id: check-ast
+    - id: check-json
+    - id: check-yaml
+    - id: check-toml
+    - id: detect-private-key
+-   repo: https://github.com/psf/black
+    rev: 22.1.0
+    hooks:
+    - id: black
+      additional_dependencies: ['click==8.0.4']
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+    - id: flake8
+-   repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+    - id: isort
+# interrogate -vv -i tests/test_module.py
+-   repo: https://github.com/econchick/interrogate
+    rev: 1.5.0
+    hooks:
+    - id: interrogate
+      args: [-vv, -i]
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v2.32.1
+    hooks:
+    -   id: pyupgrade
+-   repo: https://github.com/kynan/nbstripout
+    rev: 0.5.0
+    hooks:
+    -   id: nbstripout

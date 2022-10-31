@@ -1,0 +1,32 @@
+name: Testing {ci}
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install VM
+        run: |
+          make vm
+      - name: Install dependencies
+        run: |
+          make install
+      - name: Check quality
+        run: |
+          make quality
+      - name: Format code
+        run: |
+          make style
+      - name: Lint with pylint
+        run: |
+          make lint
+      - name: Test with pytest
+        run: |
+          make test
