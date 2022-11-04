@@ -10,11 +10,15 @@ PACKAGE_NAME=keebler-studio
 
 .PHONY: clean
 
+git_configure:
+	git init
+
 vm:
-	virtualenv ~/$(VMNAME)
+	python -m venv ~/$(VMNAME)
 	echo "source ~/$(VMNAME)/bin/activate" >> ~/.bashrc
 
 install:
+# pre-commmit to git hooks on execution of 'git commit'
 	pip install -U  pip setuptools wheel &&		\
 	pip install -r  env/requirements.txt &&		\
 	pre-commit install
@@ -28,8 +32,10 @@ clean:
 build:
 	python setup.py build
 
-# test:
-# 	pip install -r  env/requirements_test.txt
+test:
+	pip install -r  env/requirements_test.txt
+	python -m pytest -vvv  --cov=keebler tests
+
 # 	python -m pytest -vvv  --cov=keebler examples tests
 # 	python -m pytest -ravv --cov=keebler examples tests
 
