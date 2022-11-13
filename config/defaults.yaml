@@ -1,0 +1,7 @@
+project:
+  name:         'name of project'
+  user:         'akamlani'
+  description:  'description of project'
+  # tags associated with project
+  tags:
+    - demo

@@ -2,9 +2,10 @@ pre-commit==2.19.0              # https://pre-commit.com/
 
 # linting, formatting
 pylint==2.12.2
-flake8==4.0.1
-black==22.3.0
-isort==5.10.1
+flake8==4.0.1                   # PEP8 checker
+black==22.3.0                   # formatter
+isort==5.10.1                   # Sort imports
+mypy==0.982                     # static type checker
 interrogate==1.5.0              # check for missing docstrings
 pyupgrade==2.32.1               # automatically upgrade syntax for newer versions of the language
 autopep8==1.6.0

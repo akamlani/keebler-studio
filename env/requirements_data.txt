@@ -1,6 +1,7 @@
 # data sources
 opendatasets==0.1.22
-fsspec==2022.10.0
+fsspec>=2022.5.0
+datasets==2.6.1
 # data munging
 polars==0.14.24
 # data validation
@@ -9,3 +10,7 @@ pandera==0.13.3
 pydantic==1.10.2
 # data analysis
 sparklines==0.4.2
+
+
+# dataops
+# dagshub

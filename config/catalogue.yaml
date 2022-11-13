@@ -1,0 +1,11 @@
+catalogue:
+    uuid:
+      type: Union[int, str, uuid.UUID]
+      text: an unique identifier of the  asset
+    uri:
+      type: str
+      text: the path to the data or model asset for catalogue management
+    modality:
+      type: str
+      text: type of modality for asset acquisition
+      default: structured
