@@ -1,3 +1,7 @@
+[![Testing {ci}](https://github.com/akamlani/keebler-studio/actions/workflows/testing-ci.yml/badge.svg)](https://github.com/akamlani/keebler-studio/actions/workflows/testing-ci.yml)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=492249131&machine=standardLinux32gb&location=EastUs)
+
+
 # keebler-studio
 Template starter pack for new projects
 
