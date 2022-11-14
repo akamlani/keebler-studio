@@ -30,3 +30,6 @@ jobs:
       - name: Test with pytest
         run: |
           make test
+      - name: Build the Codespace container image
+        run: |
+          docker build . --file .devcontainer/Dockerfile

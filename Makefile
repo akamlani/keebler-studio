@@ -19,8 +19,8 @@ vm:
 
 install:
 # pre-commmit to git hooks on execution of 'git commit'
-	pip install -U  pip setuptools wheel &&		\
-	pip install -r  env/requirements.txt &&		\
+	pip install -U pip setuptools wheel &&		\
+	pip install -r env/requirements.txt && 		\
 	pre-commit install
 
 clean:

@@ -10,7 +10,7 @@ repos:
     - id: check-added-large-files
     - id: check-symlinks
     - id: check-ast
-    - id: check-json
+#    - id: check-json
     - id: check-yaml
     - id: check-toml
     - id: detect-private-key
