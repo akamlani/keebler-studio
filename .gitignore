@@ -1,3 +1,13 @@
+# data,experiments,storage
+experiments/
+logs/
+stores/
+data/
+# Operating System (OS
+.DS_Store
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
