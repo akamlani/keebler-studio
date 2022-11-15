@@ -5,7 +5,7 @@
 # 	python -m virtualenv ~/.venv
 
 VMROOT=.venv
-VMNAME=$(VMROOT)/scratch-wks
+VMNAME=$(VMROOT)/default-wks
 PACKAGE_NAME=keebler-studio
 
 .PHONY: clean
