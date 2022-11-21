@@ -6,7 +6,7 @@ from typing import Any, Dict
 import coloredlogs
 from omegaconf import DictConfig, OmegaConf
 
-from ..core.io.reader import read_hydra, read_yaml
+from ..core.io.reader import read_hydra
 
 
 def configure_logging(file_path: str, prefix: str = None, level: int = None, **kwargs) -> None:
