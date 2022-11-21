@@ -15,13 +15,16 @@ git_configure:
 
 vm:
 	python -m venv ~/$(VMNAME)
+	source ~/$(VMNAME)/bin/activate
 	echo "source ~/$(VMNAME)/bin/activate" >> ~/.bashrc
 
 install:
 # pre-commmit to git hooks on execution of 'git commit'
-	pip install -U pip setuptools wheel &&		\
-	pip install -r env/requirements.txt && 		\
-	pre-commit install
+	pip install -U pip pip-tools setuptools wheel &&		\
+	pip install -r env/requirements.txt && 					\
+	pre-commit install && 									\
+	pre-commit autoupdate
+
 
 clean:
 	pip uninstall $(PACKAGE_NAME)

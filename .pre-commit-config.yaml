@@ -1,9 +1,12 @@
-# install pre-commit hooks: pre-commit install
+# install pre-commit hooks:
+# > pre-commit install
+# > git commit -m 'add pre-commit examples'
+# > git commit -m 'add pre-commit examples' --no-verify
 repos:
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.3.0
     hooks:
     - id: trailing-whitespace
     - id: end-of-file-fixer
@@ -16,12 +19,12 @@ repos:
     - id: check-toml
     - id: detect-private-key
 -   repo: https://github.com/psf/black
-    rev: 22.1.0
+    rev: 22.10.0
     hooks:
     - id: black
       additional_dependencies: ['click==8.0.4']
 -   repo: https://github.com/pycqa/flake8
-    rev: 4.0.1
+    rev: 5.0.4
     hooks:
     - id: flake8
 -   repo: https://github.com/pycqa/isort
@@ -29,19 +32,28 @@ repos:
     hooks:
     - id: isort
 # interrogate -vv -i tests/test_module.py
+# checks your codebase for missing docstrings: e.g. interrogate -vv  -i {pythonfile}.py
 -   repo: https://github.com/econchick/interrogate
     rev: 1.5.0
     hooks:
     - id: interrogate
       args: [-vv, -i]
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.32.1
+    rev: v3.2.2
     hooks:
     - id: pyupgrade
+# strip output from jupyter notebook cells
 -   repo: https://github.com/kynan/nbstripout
-    rev: 0.5.0
+    rev: 0.6.1
     hooks:
     - id: nbstripout
+# check the quality of the code in your Jupyter Notebook and automatically format it
+-   repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.5.3
+    hooks:
+    - id: nbqa-flake8
+    - id: nbqa-isort
+    - id: nbqa-black
 # shellcheck-py for linting shell files
 -   repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.8.0.4

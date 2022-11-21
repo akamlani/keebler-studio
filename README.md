@@ -19,3 +19,14 @@ pip install -e .
 pip install -e ".[all]"
 pip install -e ".[data]"
 ```
+
+## Citations
+------------------
+If you reference in your research, please cite:
+```
+@article{Keebler2022,
+    author = {Kamlani, Ari},
+    title  = {{Spinning up Frameworks}},
+    year   = {2022}
+}
+```
