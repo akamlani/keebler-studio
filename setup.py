@@ -15,11 +15,11 @@ def get_version() -> str:
 
 
 # read description for long-form description
-with open("README.md", "r", encoding="utf-8") as f:
+with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
 # read requirements for core development installation
-with open(Path("env").joinpath("requirements.txt"), "r", encoding="utf-8") as f:
+with open(Path("env").joinpath("requirements.txt"), encoding="utf-8") as f:
     requirements = [line.strip() for line in f if len(line) > 1 and "#" not in line]
 
 # read requirements for core development installation
@@ -29,7 +29,7 @@ extra = {}
 files = [*Path("env").glob("**/requirements_*")]
 etypes = [f.stem.split("_")[-1] for f in files]
 for etype, filepath in zip(etypes, files):
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, encoding="utf-8") as f:
         extra[etype] = [line.strip() for line in f if len(line) > 1 and "#" not in line]
 # repackage information
 extra["all"] = [item for sublist in extra.values() for item in sublist]

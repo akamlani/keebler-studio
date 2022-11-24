@@ -16,7 +16,9 @@ git_configure:
 vm:
 	python -m venv ~/$(VMNAME)
 	source ~/$(VMNAME)/bin/activate
+	conda env update --prune
 	echo "source ~/$(VMNAME)/bin/activate" >> ~/.bashrc
+	echo "source ~/$(VMNAME)/bin/activate" >> ~/.zshrc
 
 install:
 # pre-commmit to git hooks on execution of 'git commit'
