@@ -2,6 +2,7 @@
 # setup:
 # 	conda create -n core.3.7 python=3.7
 # 	conda activate core.3.7
+#   conda update
 # 	python -m virtualenv ~/.venv
 
 VMROOT=.venv
@@ -16,7 +17,6 @@ git_configure:
 vm:
 	python -m venv ~/$(VMNAME)
 	source ~/$(VMNAME)/bin/activate
-	conda env update --prune
 	echo "source ~/$(VMNAME)/bin/activate" >> ~/.bashrc
 	echo "source ~/$(VMNAME)/bin/activate" >> ~/.zshrc
 
