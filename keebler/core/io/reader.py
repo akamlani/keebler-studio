@@ -3,6 +3,7 @@ import io
 import json
 import logging
 import os
+import zipfile
 from pathlib import Path
 
 import hydra
@@ -92,3 +93,20 @@ def read_tabular(file_path: str, **kwargs) -> pd.DataFrame:
 
     except Exception as e:
         logger.exception(f"Exception Occured Reading File: {file_path}:{e}")
+
+
+def decompress_archive(src_path: str, out_path: str = ".") -> dict:
+    """Decompresses a zip archive to a given path
+
+    :param src_path: file path towards content to decompress
+    :param out_path: path to decompress to if not current path, defaults to .
+    :return: None
+    """
+    try:
+        if Path(src_path).is_file():
+            with open(src_path) as ref:
+                ref.extractall(out_path)
+        else:
+            logger.error(f"File: {src_path} does not Exist")
+    except Exception as e:
+        logger.exception(f"Exception Occured Decompressing File: {src_path}:{e}")
