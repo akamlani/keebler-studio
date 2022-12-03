@@ -45,7 +45,8 @@ rich==11.2.0
 # for notebooks
 nbval==0.9.6
 nbqa==1.2.3
-nbstripout==0.5.0               #  clear All output commands
+nbstripout==0.5.0               # clear All output commands
+notebook==6.5.2                 # jupyter notebook
 
 # for cli
 click<8.0.2,>=7.0.0             # for feast dependency conflict

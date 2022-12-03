@@ -1,4 +1,6 @@
 pytest==6.2.5
 pytest-benchmark==4.0.0         # benchmark, %timeit
 pytest-cov==3.0.0               # codecov for testing code coverage
+pytest-mock=3.10.0              # mocker fiture, as a wrapper around mock package
 mock==4.0.3
+pyfakefs==5.0.0                 # fake fmile system that mocks the python file system modules
